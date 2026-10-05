@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #263238;
+}
+
+/* Header */
+header {
+    background: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 1px solid #ddd;
+}
+header h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+header p {
+    margin: 0;
+    color: #777;
+}
+
+/* Main */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.stat {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.stat h2 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+.stat p {
+    margin: 0;
+    color: #777;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.card h2 {
+    margin-top: 0;
+}
+
+/* Form */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 10px;
+}
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.85;
+}
+
+/* Medicine */
+.medicine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.medicine h3 {
+    margin: 0 0 5px;
+}
+.medicine p {
+    margin: 0;
+    color: #777;
+}
+.taken {
+    background: #10b981;
+}
+.delete {
+    background: #dc2626;
+    margin-left: 5px;
+}
+
+/* Empty */
+#empty {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+#empty p:first-child {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+    form {
+        grid-template-columns: 1fr;
+    }
+    .medicine {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
