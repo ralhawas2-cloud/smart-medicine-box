@@ -1,18 +1,77 @@
-<div class="container">
-    <h1>💊 Smart Medicine Box</h1>
-    <p>Manage your medications and never miss a dose.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Medicine Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>💊 Smart Medicine Box</h1>
+        <p>Smart medication management made simple.</p>
+    </header>
+    <main>
+        <section class="dashboard">
+            <div class="stat">
+                <h2 id="total">0</h2>
+                <p>Total Medicines</p>
+            </div>
+            <div class="stat">
+                <h2 id="taken">0</h2>
+                <p>Taken Today</p>
+            </div>
+            <div class="stat">
+                <h2 id="upcoming">0</h2>
+                <p>Upcoming</p>
+            </div>
+            <div class="stat">
+                <h2 id="missed">0</h2>
+                <p>Missed</p>
+            </div>
+        </section>
 
-    <div class="medicine-card">
-        <h2>Paracetamol</h2>
-        <p>💊 Dose: 1 tablet</p>
-        <p>⏰ Time: 08:00 PM</p>
+        <section class="card">
+            <h2>➕ Add Medicine</h2>
+            <form id="medicineForm">
+                <input
+                    type="text"
+                    id="medicineName"
+                    placeholder="Medicine name"
+                    required
+                >
+                <input
+                    type="text"
+                    id="medicineDose"
+                    placeholder="Dose e.g. 1 tablet"
+                    required
+                >
+                <input
+                    type="time"
+                    id="medicineTime"
+                    required
+                >
+                <button type="submit">
+                    Add Medicine
+                </button>
+            </form>
+        </section>
 
-        <button onclick="takeMedicine()">
-            Mark as Taken
-        </button>
+        <section class="card">
+            <h2>📋 Today's Medications</h2>
+            <div id="medicineList"></div>
+            <div id="empty">
+                <p>💊</p>
+                <h3>No medicines added yet</h3>
+                <p>Add your first medicine above.</p>
+            </div>
+        </section>
+    </main>
 
-        <p id="status"></p>
-    </div>
-</div>
+    <footer>
+        Smart Medicine Box © 2026
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
